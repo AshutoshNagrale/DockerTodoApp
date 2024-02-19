@@ -40,3 +40,28 @@
 .read-the-docs {
   color: #888;
 }
+
+.App {
+  text-align: center;
+}
+.todo-app {
+  background-color: #efefef;
+  padding: 1.2em;
+}
+.new-todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+input {
+  width: 80% !important;
+}
+
+.list-group-item:hover,
+.list-group-item:active {
+  background-color: #d3d3d3;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
