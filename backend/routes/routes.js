@@ -23,6 +23,7 @@ router.post("/todos", (req, res) => {
 router.get("/", (req, res) => {
   Todo.find({}, { __v: 0 })
     .then((todos) => {
+      console.log(todos);
       sendSuccess(res, SUCCESSFUL, todos);
     })
     .catch((e) => {

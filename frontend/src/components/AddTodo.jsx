@@ -1,17 +1,17 @@
 import React from "react";
 
-const AddTodo = ({handleAddTodo}) => {
+const AddTodo = ({ handleAddTodo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const { value } = e.target.elements.value;
-    if (value.length > 0) {
+    if (value?.length > 0) {
       handleAddTodo(value);
       e.target.reset();
     }
   };
   return (
     <>
-      <form noValidate onSubmit={handleSubmit} className="new-todo form-group">
+      <form noValidate onSubmit={handleSubmit} className="todoForm">
         <input
           type="text"
           name="value"
@@ -19,9 +19,7 @@ const AddTodo = ({handleAddTodo}) => {
           minLength={1}
           className="form-control"
         />
-        <button className="btn btn-primary" type="submit">
-          Add Todo
-        </button>
+        <button type="submit">Add Todo</button>
       </form>
     </>
   );

@@ -10,11 +10,11 @@ const TodoList = ({ todos }) => {
     <>
       {todos.length > 0 ? (
         <div>
-          <ul className="list-group">
+          <ul className="list">
             {todos.map((todo, i) => (
               <li
                 className={
-                  "list-group-item cursor-pointer " +
+                  "listitem" +
                   (i === activeIndex ? "active" : "")
                 }
                 key={i}

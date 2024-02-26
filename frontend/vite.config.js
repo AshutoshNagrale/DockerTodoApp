@@ -7,13 +7,12 @@ export default ({ mode }) => {
   const config = {
     plugins: [react()],
     server: {
-      proxy: {
-        "/api": {
-          target: process.env.VITE_BACKEND_API_URL,
-          changeOrigin: true,
-          rewrite: (path) => path.replace(/^\/api/, ""),
-        },
+      watch: {
+        usePolling: true,
       },
+      host: true, // needed for the Docker Container port mapping to work
+      strictPort: true,
+      port: 4000, // you can replace this port with any port
     },
   };
   return defineConfig(config);
